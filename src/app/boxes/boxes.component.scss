@@ -1,0 +1,28 @@
+.boxes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  .boxes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .box-wrapper {
+      display: flex;
+      margin: 15px 5px 0;
+    }
+  }
+}
+
+.no-boxes-found {
+  color: var(--green);
+  font-weight: bold;
+  padding: 50px;
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+

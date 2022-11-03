@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary: #31353d;
+  --accent: #00c74d;
+  --normal: inherit;
+  --soft: #767b83;
+  --softer: #9499a2;
+  --contrast: var(--text-contrast);
+  --black: #31353d;
+  --green: #00c74d;
+  --green-bright: #00e258;
+  --red: #de4c41;
+  --red-bright: #ff5548;
+  --blue: #639ad5;
+  --yellow: #ffe063;
+  --purple: #8857f7;
+  --bronze: #d6a06a;
+  --silver: #b4bcc8;
+  --golden: #ecce75;
+  --sunglow: #f7bf1e;
+  --bait: #7c99b4;
+  --tier-1: #9f9991;
+  --tier-2: #d19f69;
+  --tier-3: #bdc5d1;
+  --tier-4: #fad84e;
+  --tier-5: #0ec555;
+  --tier-6: #d44339;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--cream)
+}
+
+router-outlet + * {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

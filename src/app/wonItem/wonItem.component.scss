@@ -1,0 +1,37 @@
+.won-item {
+  display: flex;
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  top: 20%;
+  background: var(--green-bright);
+  z-index: 1;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+
+  .won-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    .hide-won-item {
+      display: flex;
+      justify-content: end;
+      cursor: pointer;
+    }
+
+    .won-item-details {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 30px;
+
+      h4 {
+        font-size: 15px;
+        margin: -20px 0 0;
+      }
+    }
+  }
+}
