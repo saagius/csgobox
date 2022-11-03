@@ -10,6 +10,7 @@ import {
 } from './currentUser.actions';
 import { UserService } from '../../api/user.service';
 import { User, Wallet } from '../../user/user';
+import { of } from 'rxjs';
 
 @Injectable()
 export class CurrentUserEffects {
@@ -17,10 +18,16 @@ export class CurrentUserEffects {
 		this.actions$.pipe(
 			ofType(loadCurrentUser),
 			switchMap(() => this.userService.getCurrentUser()),
-			switchMap((user: User) => [
-				loadCurrentUserSuccess({ user }),
-				subscribeToWalletUpdates()
-			]),
+			switchMap((user: User) => {
+				if(user) {
+					return [
+						loadCurrentUserSuccess({ user }),
+						subscribeToWalletUpdates()
+					]
+				}
+
+				return of({ type: 'NO_ACTION'});
+			}),
 			catchError(() => [loadCurrentUserError()])
 		)
 	);
